@@ -1,0 +1,35 @@
+<p>users-list works!</p>
+<h2> Employee List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> NIC</th>
+            <th>  Name </th>
+            <th> Username</th>
+            <th>  Password </th>
+            <th> Age</th>
+            <th>  Address </th>
+            <th> Email</th>
+            <th> Phone</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        <tr *ngFor = "let employee of employees" >
+            <td> {{ employee.nic }} </td>
+            <td> {{ employee.name }} </td>
+            <td> {{ employee.username }} </td>
+            <td> {{ employee.password }} </td>
+            <td> {{ employee.age }} </td>
+            <td> {{ employee.address }} </td>
+            <td> {{ employee.email}} </td>
+            <td> {{ employee.phonenumber }} </td> 
+            <td>
+                <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+               
+            </td>
+        </tr>
+    </tbody>
+</table>

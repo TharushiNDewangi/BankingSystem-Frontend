@@ -1,0 +1,62 @@
+<p>user-create works!</p>
+
+<div class="col-md-6 offset-md-3">
+    <h3> Create Employee </h3>
+    <form  [formGroup]="exform" (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> nic</label>
+            <input formControlName="nic" type="text"  required minlength="4" class ="form-control" id = "nic"
+                [(ngModel)] = "employee.nic" name = "nic">
+                <small *ngIf="nic?.invalid && nic?.touched" class="text-danger">First Name is Required</small> 
+
+        </div>
+    
+        <div class="form-group">
+            <label> name</label>
+            <input formControlName="name" type="text" class ="form-control" id = "name"
+                [(ngModel)] = "employee.name" name = "name">
+                <small *ngIf="name?.invalid && name?.touched" class="text-danger"> Name is Required</small>  
+        </div>
+        <div class="form-group">
+            <label> username</label>
+            <input formControlName="username" type="text" class ="form-control" id = "username"
+                [(ngModel)] = "employee.username" name = "username">
+                <small *ngIf="username?.invalid && username?.touched" class="text-danger"> username is Required</small>  
+        </div>
+        <div class="form-group">
+            <label> password </label>
+            <input formControlName="password " type="text" class ="form-control" id = "password "
+                [(ngModel)] = "employee.password " name = "password ">
+                <small *ngIf="password ?.invalid && password ?.touched" class="text-danger">password is Required</small>  
+        </div>
+        <div class="form-group">
+            <label> age</label>
+            <input formControlName="age" type="number" class ="form-control" id = "age"
+                [(ngModel)] = "employee.age" name = "age">
+                <small *ngIf="age?.invalid && age?.touched" class="text-danger"> age is Required</small>  
+        </div>
+        <div class="form-group">
+            <label> address</label>
+            <input formControlName="address" type="text" class ="form-control" id = "address"
+                [(ngModel)] = "employee.address" name = "address">
+                <small *ngIf="address?.invalid && address?.touched" class="text-danger"> address is Required</small>  
+        </div>
+        <div class="form-group">
+            <label> Email Id</label>
+            <input formControlName="email" type="text" class ="form-control" id = "email"
+                [(ngModel)] = "employee.email" name = "email">
+                <small *ngIf="email?.invalid && email?.touched" class="text-danger">Email is Required</small>
+        </div>
+        <div class="form-group">
+            <label>phonenumber</label>
+            <input formControlName="phonenumber" type="text" class ="form-control" id = "phonenumber"
+                [(ngModel)] = "employee.phonenumber" name = "phonenumber">
+                <small *ngIf="phonenumber?.invalid && phonenumber?.touched" class="text-danger"> phonenumber is Required</small>  
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
+

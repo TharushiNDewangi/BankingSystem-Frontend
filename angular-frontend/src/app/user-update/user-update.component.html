@@ -1,0 +1,56 @@
+<p>user-create works!</p>
+
+<div class="col-md-6 offset-md-3">
+    <h3> Create Employee </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> nic</label>
+            <input  type="text"  required minlength="4" class ="form-control" id = "nic"
+                [(ngModel)] = "employee.nic" name = "nic">
+        </div>
+    
+        <div class="form-group">
+            <label> name</label>
+            <input type="text" class ="form-control" id = "name"
+                [(ngModel)] = "employee.name" name = "name">
+        </div>
+        <div class="form-group">
+            <label> username</label>
+            <input type="text" class ="form-control" id = "username"
+                [(ngModel)] = "employee.username" name = "username">
+        </div>
+        <div class="form-group">
+            <label> password </label>
+            <input type="text" class ="form-control" id = "password "
+                [(ngModel)] = "employee.password " name = "password ">
+             
+        </div>
+        <div class="form-group">
+            <label> age</label>
+            <input type="number" class ="form-control" id = "age"
+                [(ngModel)] = "employee.age" name = "age"> 
+        </div>
+        <div class="form-group">
+            <label> address</label>
+            <input type="text" class ="form-control" id = "address"
+                [(ngModel)] = "employee.address" name = "address">
+                
+        </div>
+        <div class="form-group">
+            <label> Email Id</label>
+            <input type="text" class ="form-control" id = "email"
+                [(ngModel)] = "employee.email" name = "email">
+              
+        </div>
+        <div class="form-group">
+            <label>phonenumber</label>
+            <input type="text" class ="form-control" id = "phonenumber"
+                [(ngModel)] = "employee.phonenumber" name = "phonenumber">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
+

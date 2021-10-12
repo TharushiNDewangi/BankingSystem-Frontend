@@ -1,0 +1,46 @@
+/*
+  This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language server to improve development experience.
+  It is not intended to be used to perform a compilation.
+
+  To learn more about this file see: https://angular.io/config/solution-tsconfig.
+*/
+{
+  "files": [
+    "index.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+],
+"lib": [
+  "es2018",
+  "dom",
+  "es5", 
+  "es6"
+],
+"module": "es2015",
+"target": "es6",
+"compilerOptions": {
+  "declaration": true,
+  "module": "commonjs",
+  "lib": ["es5", "es6", "dom"],
+  "newLine": "LF",
+  "noEmitHelpers": true,
+  "noImplicitAny": false,
+  "noImplicitThis": true,
+  "noUnusedLocals": true,
+  "noUnusedParameters": true,
+  "strictNullChecks": true,
+  "strictFunctionTypes": true,
+  "target": "es5",
+
+  "baseUrl": ".",
+  "paths": { "immutability-helper": ["."] }
+},
+"emitDecoratorMetadata": true,
+"experimentalDecorators": true,
+}
